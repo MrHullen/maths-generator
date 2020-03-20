@@ -19,6 +19,15 @@
   }
 </script>
 
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 500px;
+  }
+</style>
+
 <h1 class="title">Maths Worksheet Generator</h1>
 
 <label class="label">
@@ -35,10 +44,16 @@
 
 <section class="section">
   {#each questions as question}
-    <pre><p>{question.first}</p></pre>
-    <pre><p>{question.second}</p></pre>
-    <pre><p>{question.third}</p></pre>
-    <pre><p>{question.fourth}</p></pre>
+    <div>
+      <pre><p>{question.first}</p></pre>
+      <pre><p>{question.second}</p></pre>
+      <pre><p>{question.third}</p></pre>
+      <pre><p>{question.fourth}</p></pre>
+    </div>
     <hr>
   {/each}
+  <div>
+  
+  </div>
+  
 </section>
