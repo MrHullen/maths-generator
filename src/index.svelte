@@ -32,7 +32,7 @@
 </script>
 
 <style>
-  section {
+  #questions {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -42,36 +42,31 @@
 
 <h1 class="title">Maths Worksheet Generator</h1>
 
-<div>
-  <div>
-    <label class="label">
-      Min:
-      <input type="number" bind:value={min}>
-    </label>
-
-    <label class="label">
-      Max:
-      <input type="number" bind:value={max}>
-    </label>
-  </div>
-
-  <div>
-    <label class="label">
-      Add/Subtract:
-      <input type="radio" bind:group={operator} value={"+"}>
-    </label>
-
-    <label class="label">
-      Multiply/Divide:
-      <input type="radio" bind:group={operator} value={"*"}>
-    </label>
-  </div>
-</div>
-
-
-<button class="button" on:click={createQuestions}>Generate</button>
-
 <section class="section">
+  <label class="label">
+    Min:
+    <input type="number" bind:value={min}>
+  </label>
+
+  <label class="label">
+    Max:
+    <input type="number" bind:value={max}>
+  </label>
+
+  <label class="label">
+    <input type="radio" bind:group={operator} value={"+"}>
+    Add/Subtract
+  </label>
+
+  <label class="label">
+    <input type="radio" bind:group={operator} value={"*"}>
+    Multiply/Divide
+  </label>
+
+  <button class="button" on:click={createQuestions}>Generate</button>
+</section>
+
+<section class="section" id="questions">
   {#each questions as question}
     <div>
       <pre><p>{question.first}</p></pre>
@@ -79,7 +74,6 @@
       <pre><p>{question.third}</p></pre>
       <pre><p>{question.fourth}</p></pre>
     </div>
-    <hr>
   {/each}
   <div>
   
