@@ -40,7 +40,22 @@
   }
 </style>
 
-<h1 class="title">Maths Worksheet Generator</h1>
+<svelte:head>
+  <title>Maths Generator</title>
+</svelte:head>
+
+<section class="hero is-primary">
+  <div class="hero-body">
+    <div class="container">
+      <h1 class="title">
+        Maths Worksheet Generator
+      </h1>
+      <h2 class="subtitle">
+        Time to git gud!
+      </h2>
+    </div>
+  </div>
+</section>
 
 <section class="section">
   <label class="label">
